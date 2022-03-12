@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/adnanali8648/SoftwareChallange/issues"
   },
-  "homepage": "https://github.com/adnanali8648/SoftwareChallange#readme"
+  "homepage": "https://github.com/adnanali8648/SoftwareChallange#readme",
+  "dependencies": {
+    "@angular/cli": "^13.2.6"
+  }
 }
