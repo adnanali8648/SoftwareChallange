@@ -1,0 +1,39 @@
+.list {
+  width: 50%;
+  margin: auto;
+}
+.heading {
+  font-weight: bold;
+  font-size: xx-large;
+  text-align: center;
+  padding: 20px;
+}
+.list-data {
+  font-weight: bold;
+  color: black;
+  padding: 20px;
+}
+
+.mat-card {
+  background: #fff;
+  color: rgb(37, 36, 36);
+  padding: 20px;
+}
+.mat-raised-button {
+  background: blueviolet;
+}
+.mat-card-actions {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+.mat-card > .mat-card-actions:last-child {
+  margin-bottom: -0;
+  padding-bottom: 0;
+}
+ul {
+  padding-left: 17px;
+}
+.clear {
+  clear: both;
+}

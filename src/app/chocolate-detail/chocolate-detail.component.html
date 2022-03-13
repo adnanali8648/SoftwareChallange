@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="back">
+    <a mat-raised-button routerLink="/list">Back</a>
+  </div>
+  <br />
+  <div class="details">
+    <div class="name">
+      <h1>{{ dataSource.name }}</h1>
+    </div>
+    <div>
+      <span class="brand">{{ dataSource.brand }}</span>
+    </div>
+    <br />
+    <div class="prices">
+      <table class="myTable">
+        <tr>
+          <th>position</th>
+          <th>price</th>
+          <th>amount</th>
+          <th>link</th>
+        </tr>
+        <tr *ngFor="let item of dataSource.prices; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.amount }}</td>
+          <td>
+            <a href="{{ item.link }}" class="href">{{ item.shop }}</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

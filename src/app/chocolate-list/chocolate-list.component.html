@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="list">
+    <h1 class="heading">Chocolate List</h1>
+    <span *ngFor="let detail of sortedDate; let i = index">
+      <mat-card>
+        <mat-card-title>{{ detail.name }}</mat-card-title>
+        <mat-card-content>
+          <ul>
+            <li>
+              Brand : <span class="list-data">{{ detail.brand }}</span>
+            </li>
+            <li>
+              Lowest price per 100g :
+              <span class="list-data">{{ detail.prices[0]?.price }}</span>
+            </li>
+            <li>
+              Average price per 100g :
+              <span class="list-data">{{
+                detail.average | number: "1.2-2"
+              }}</span>
+            </li>
+            <li>
+              Cheapest Shop :<a href="https://example.com/rs-sesam-rs"
+                ><span class="list-data">{{ detail.prices[0]?.shop }}</span></a
+              >
+            </li>
+          </ul>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-raised-button color="primary" (click)="getId(detail.id)">
+            Details
+          </button>
+        </mat-card-actions>
+      </mat-card>
+      <br
+    /></span>
+  </div>
+</div>
