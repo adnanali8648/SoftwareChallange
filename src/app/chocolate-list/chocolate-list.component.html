@@ -1,83 +1,38 @@
 <div class="container">
   <div class="list">
     <h1 class="heading">Chocolate List</h1>
-    <span>
+    <span *ngFor="let detail of sortedDate; let i = index">
       <mat-card>
-        <mat-card-title>Test</mat-card-title>
+        <mat-card-title>{{ detail.name }}</mat-card-title>
         <mat-card-content>
           <ul>
-            <li>Brand : <span class="list-data">kitkat</span></li>
-            <li>Lowest price per 100g : <span class="list-data">30</span></li>
-            <li>Average price per 100g : <span class="list-data">3</span></li>
+            <li>
+              Brand : <span class="list-data">{{ detail.brand }}</span>
+            </li>
+            <li>
+              Lowest price per 100g :
+              <span class="list-data">{{ detail.prices[0]?.price }}</span>
+            </li>
+            <li>
+              Average price per 100g :
+              <span class="list-data">{{
+                detail.average | number: "1.2-2"
+              }}</span>
+            </li>
             <li>
               Cheapest Shop :<a href="https://example.com/rs-sesam-rs"
-                ><span class="list-data">Rewe</span></a
+                ><span class="list-data">{{ detail.prices[0]?.shop }}</span></a
               >
             </li>
           </ul>
         </mat-card-content>
         <mat-card-actions align="end">
-          <button mat-raised-button color="primary">Details</button>
+          <button mat-raised-button color="primary" (click)="getId(detail.id)">
+            Details
+          </button>
         </mat-card-actions>
       </mat-card>
-      <br />
-
-      <mat-card>
-        <mat-card-title>Test</mat-card-title>
-        <mat-card-content>
-          <ul>
-            <li>Brand : <span class="list-data">kitkat</span></li>
-            <li>Lowest price per 100g : <span class="list-data">30</span></li>
-            <li>Average price per 100g : <span class="list-data">3</span></li>
-            <li>
-              Cheapest Shop :<a href="https://example.com/rs-sesam-rs"
-                ><span class="list-data">Rewe</span></a
-              >
-            </li>
-          </ul>
-        </mat-card-content>
-        <mat-card-actions align="end">
-          <button mat-raised-button color="primary">Details</button>
-        </mat-card-actions>
-      </mat-card>
-      <br />
-      <mat-card>
-        <mat-card-title>Test</mat-card-title>
-        <mat-card-content>
-          <ul>
-            <li>Brand : <span class="list-data">kitkat</span></li>
-            <li>Lowest price per 100g : <span class="list-data">30</span></li>
-            <li>Average price per 100g : <span class="list-data">3</span></li>
-            <li>
-              Cheapest Shop :<a href="https://example.com/rs-sesam-rs"
-                ><span class="list-data">Rewe</span></a
-              >
-            </li>
-          </ul>
-        </mat-card-content>
-        <mat-card-actions align="end">
-          <button mat-raised-button color="primary">Details</button>
-        </mat-card-actions>
-      </mat-card>
-      <br />
-      <mat-card>
-        <mat-card-title>Test</mat-card-title>
-        <mat-card-content>
-          <ul>
-            <li>Brand : <span class="list-data">kitkat</span></li>
-            <li>Lowest price per 100g : <span class="list-data">30</span></li>
-            <li>Average price per 100g : <span class="list-data">3</span></li>
-            <li>
-              Cheapest Shop :<a href="https://example.com/rs-sesam-rs"
-                ><span class="list-data">Rewe</span></a
-              >
-            </li>
-          </ul>
-        </mat-card-content>
-        <mat-card-actions align="end">
-          <button mat-raised-button color="primary">Details</button>
-        </mat-card-actions>
-      </mat-card>
-    </span>
+      <br
+    /></span>
   </div>
 </div>
