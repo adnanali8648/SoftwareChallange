@@ -11,7 +11,9 @@
             </li>
             <li>
               Lowest price per 100g :
-              <span class="list-data">{{ detail.prices[0]?.price }}</span>
+              <span class="list-data">{{
+                detail.prices[0]?.price | number: "1.2-2"
+              }}</span>
             </li>
             <li>
               Average price per 100g :
